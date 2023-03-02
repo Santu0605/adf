@@ -73,7 +73,7 @@
 				"filter2 aggregate(groupBy(NoOfChildren),",
 				"     Total_revenue = sum(toInteger(TotalRevenueGenerated))) ~> aggregate1",
 				"filter1 aggregate(groupBy(TotalRevenueGenerated),",
-				"     totalrevenu = ERROR_FUNCTION('')) ~> aggregate2",
+				"     totalrevenu = TotalRevenueGenerated) ~> aggregate2",
 				"aggregate1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     umask: 0022,",
